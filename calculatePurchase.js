@@ -59,27 +59,26 @@ const divide = (value, emails) => {
   return values;
 }
 
-//criando a função que gera o mapa
-const createMap = (emails, total, mapa) => {
+//criando a função que gera o map
+const createMap = (emails, total, map) => {
   const [first, second] = total;
 
   if (first === second) {
-    emails.forEach((mail) => mapa.set(mail, first));
+    emails.forEach((mail) => map.set(mail, first));
   }
 
-  mapa.set(emails[0], first);
+  map.set(emails[0], first);
   for (let i = 1; i < emails.length; i++) {
-    mapa.set(emails[i], second);
+    map.set(emails[i], second);
   }
 
-  return mapa;
+  return map;
 };
 
 //chamando a função principal e passando a lista de compras e a lista de emails como parametro
 calculatePurchase(buyList, emailsList)
 
 function calculatePurchase(buyList, emailsList) {
-  const total = totalPerItem(buyList)
 
   if (buyList.length == 0 || emailsList.some(emails => emails == "")) {
     console.log('Não há itens');
@@ -89,6 +88,8 @@ function calculatePurchase(buyList, emailsList) {
      console.log('Não há emails');
      return;
    }
+
+  const total = totalPerItem(buyList)
 
   const totalPerPerson = divide(total, emailsList.length)
 

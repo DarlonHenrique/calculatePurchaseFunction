@@ -1,8 +1,7 @@
 # Desafio Elixir Stone
 > Documentação da função CalculatePurchase
 
-## Como criar a **buyList** 
-> importante: criar com o exato nome de "buyList" 
+## Crie uma lista de compras conforme a estrtura a seguir:
 ```
 const buyList = [
   {
@@ -23,8 +22,7 @@ const buyList = [
 ]
 ```
 
-## Como criar a **emailsList**
-> importante: criar com o exato nome de "emailsList" 
+## Crie uma lista de emails conforme a estrtura a seguir:
 ```
 const emailsList = [
   "email1@stone.com",
@@ -43,7 +41,12 @@ const emailsList = [
 
 eu coloco o arquivo index.js dentro de uma pasta e abro no vscode atraves do terminal integrado do vscode eu executo *node index.js* o resultado vai ser gerado pelo *console.log(mapa)*
 
-## funcionameento do codigo
+## mensagens de erro 
 
-a **buyList** e a **emailsList** vai entrar na função principal chamada de **calculatePurchase**
-em seguida a const **total** vai receber o return da function **totalPerItem** com a **buyList** como argumento, então a **calculatePurchase** faz uma verificação simples se a **buyList** ou **emailsList** tem alguma posição vazia, se sim a mensagem "Não há items" ou "Não há emails" será exibida no console, se estiver tudo ok o codigo vai continuar e a const **totalPerPerson** será criada e ela vai receber o resultado da function **divide** que vai receber a const **total** e **emailList**.length como argumentos, a const **map** recebe um objeto do tipo *Map*, logo abaixo a const **mapResult** será criada que receberá o return da function **createMap**, a function **createMap** por sua vez irá receber a **emailsList**, **totalPerPerson** e **map** como argumentos, então um *console.log(mapResult)* irá gerar um mapa como resultado, o mapa deverá ter de tamanho o mesmo numero de posições que a **emailsList** e o email na posição 0 vai receber o resto da divisão para que n falte nenhum centavo, o mapa tambem deverá ter os emails apontando pros valores.
+"Não há itens" - ocorre quando uma posição do array da Lista de compras não foi preenchida. Para resolver preencha todas as posições do array Lista de compras
+
+"Não há itens" - ocorre quando uma posição do array da Lista de emails não foi preenchida. Para resolver preencha todas as posições do array Lista de emails
+
+## funcionamento da função
+
+A função receberá uma lista de compras e uma lista de emails como parâmetros, em seguida irá verificar se existem campos vazios nos arrays recebidos como parâmetro, se todas as posiçoes dos arrays recebidos estiverem preenchidos, a função irá somar o total da lista de compras invocando a função externa **_totalPerItem_** e atribuindo o total em uma const, em seguida a função externa **_divide_** será requisitada e receberá como argumentos a const com o retorno da função **_totalPerItens_** e o atributo Length da Lista de emails, a função **_divide_** irá nos retornar um array com total da Lista de compras dividido pelo tamanho da Lista de emails, a função também vai gerar o resto da divisão e adicionar a posição 0 do array de retorno, em seguida um objeto vazio do tipo *Map* será criado e atribuido a uma const, então a função **_createMap_** será invocada que irá criar um mapa com o mesmo tamanho que a nossa Lista de emails, usando o email como chave apotando para o valor que será o resultado da função **_divide_**, então esse mapa será atribuido a uma const, essa const com o mapa atribuido vai ser inserida dentro de um **console.log()** e o resultado da função calculatePurchase será exibido no console.
