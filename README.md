@@ -45,7 +45,7 @@ eu coloco o arquivo index.js dentro de uma pasta e abro no vscode atraves do ter
 
 "Não há itens" - ocorre quando uma posição do array da Lista de compras não foi preenchida. Para resolver preencha todas as posições do array Lista de compras
 
-"Não há itens" - ocorre quando uma posição do array da Lista de emails não foi preenchida. Para resolver preencha todas as posições do array Lista de emails
+"Não há Emails" - ocorre quando uma posição do array da Lista de emails não foi preenchida. Para resolver preencha todas as posições do array Lista de emails
 
 ## funcionamento da função
 
