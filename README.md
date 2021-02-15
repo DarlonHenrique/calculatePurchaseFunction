@@ -1,7 +1,7 @@
 # Desafio Elixir Stone
 > Documentação da função CalculatePurchase
 
-## Crie uma lista de compras conforme a estrtura a seguir:
+## Crie uma lista de compras conforme a estrutura a seguir:
 ```
 const buyList = [
   {
@@ -22,7 +22,7 @@ const buyList = [
 ]
 ```
 
-## Crie uma lista de emails conforme a estrtura a seguir:
+## Crie uma lista de emails conforme a estrutura a seguir:
 ```
 const emailsList = [
   "email1@stone.com",
